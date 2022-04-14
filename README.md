@@ -65,7 +65,7 @@ Il désire avoir un site moderne avec un style qui correspond à son activité.
 
 Il désire un site, accessible et ergonomique pour présenter son activité, que les clients puissent laisser des avis(dtb), consulter ses différentes prestations (dtb) et avoir un formulaire de contact. 
 
-Notre équipe a été chargée de réaliser ce projet pour un Blombier Chauffagiste.
+Notre équipe a été chargée de réaliser ce projet pour un plombier Chauffagiste.
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
