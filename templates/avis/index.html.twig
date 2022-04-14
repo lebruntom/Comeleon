@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<style></style>
+
+	<div class="container mt-5 text-center">
+	
+			<a href="/avis/new" class="btn mb-4 px-4 btn-outline-primary">Ajouter un avis</a>
+		
+		<div class="row">
+			{% for unAvis in avis %}
+				<div class="col-6">
+					<div class="card  text-center mb-4">
+						
+								<div class="card-body">
+									<h5 class="card-title">{{ unAvis.nom }} {{ unAvis.prenom }}</h5>
+									<p class="card-text">{{ unAvis.contenu | raw }}</p>
+									<p class="card-text">déposé le :
+										<strong>{{ unAvis.date | date('d/m/y') }}</strong>
+									</p>
+									{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+										<a href="/avis/{{ unAvis.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+										<a href="/avis/{{ unAvis.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer l avis ?')" class="btn btn-outline-danger">Supprimer</a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+{% endblock %}

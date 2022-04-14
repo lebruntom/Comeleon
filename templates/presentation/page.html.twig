@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formPresentation 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1> Changement du texte </h1>
+
+        {{ form_start(formPresentation) }}
+        
+        {{ form_row(formPresentation.titre) }}
+        {{ form_row(formPresentation.contenu) }}
+        {{ form_row(formPresentation.image) }}
+        
+        
+        </br>
+        <center><button type="submit" class="btn btn-primary"> Enregistrer </button></center>
+        {{ form_end(formPresentation) }}
+</div>
+    
+{% endblock %}

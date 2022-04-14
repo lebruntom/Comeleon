@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Allo plombier{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">        
+        <link rel="stylesheet" href="assets/css/style.css">
+                <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <header>
+
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link {% if current_menu is defined and current_menu == 'accueil' %} active {% endif %}" href="/">Accueil
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if current_menu is defined and current_menu == 'presentation' %} active {% endif %}" href="/presentation">Présentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if current_menu is defined and current_menu == 'prestation' %} active {% endif %}" href="/prestation">Nos Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if current_menu is defined and current_menu == 'avis' %} active {% endif %}" href="/avis">Les Avis</a>
+        </li>
+    <li class="nav-item">
+          <a class="nav-link {% if current_menu is defined and current_menu == 'contact' %} active {% endif %}" href="/contact">Nous Contacter</a>
+        </li>
+      </ul>  
+      <div class="AbsoluteRight">
+      {% if is_granted('ROLE_ADMIN') %}
+        <a href="/logout"><button class="btn btn-secondary my-2 my-sm-0" type="submit">Deconnexion</button></a>
+        {% else %}
+        <a href="/login"><button class="btn btn-secondary my-2 my-sm-0" type="submit">Connexion</button></a>
+        {% endif %}
+        </div>
+    </div>
+  </div>
+
+
+        </header>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+          
+            
+        {% endblock %}
+    </body>
+   
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-3 mb-0 text-muted">© 2021 Company, Inc</p>
+
+			<img class="img-fluid img-thumbnail" width="120" src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg">
+
+			<ul class="nav col-md-5 justify-content-end">
+				<li class="nav-item">
+					<a href="/" class="nav-link px-2 text-muted">Accueil</a>
+				</li>
+				<li class="nav-item">
+					<a href="/presentation" class="nav-link px-2 text-muted">Qui Sommes Nous ?</a>
+				</li>
+				<li class="nav-item">
+					<a href="/prestation" class="nav-link px-2 text-muted">Nos Prestations</a>
+				</li>
+				<li class="nav-item">
+					<a href="/avis" class="nav-link px-2 text-muted">Avis</a>
+				</li>
+				<li class="nav-item">
+					<a href="/contact" class="nav-link px-2 text-muted">Contact</a>
+				</li>
+			</ul>
+		</footer>
+	
+</html>
