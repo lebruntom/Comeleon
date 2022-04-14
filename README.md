@@ -48,7 +48,7 @@
 <!-- Contexte -->
 ## Contexte
 
-![Fichier de config](Images/accueil.png)
+
 
 L’agence Comeleon propose ses services dans la création de site, application, à l’acquisition de nouveaux clients via les moteurs de recherche et les réseaux sociaux, elle accélère le business sur internet.
 
