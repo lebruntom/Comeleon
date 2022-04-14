@@ -127,7 +127,6 @@ Penssez à bien lancer WampServer lors de la configuration de la base !
 
 Modifiez les informations de connexion à la base de données dans '.env'
 
-![Fichier de config](Images/config_bdd.png)
 
 ### Importation
 
