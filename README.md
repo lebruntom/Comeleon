@@ -171,7 +171,7 @@ Par défaut, toutes personnes connectés ont la possibilité d'effectuer des mod
 <!-- CONTACT -->
 ## Contact
 
-Romain Ramanzin - [@tom-lebrun](https://www.linkedin.com/in/tom-lebrun/) - tomlebrun27@gmail.com
+Tom Lebrun - [@tom-lebrun](https://www.linkedin.com/in/tom-lebrun/) - tomlebrun27@gmail.com
 
 Lien du projet : [https://github.com/lebruntom/Comeleon](https://github.com/lebruntom/Comeleon)
 
